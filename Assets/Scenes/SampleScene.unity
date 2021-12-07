@@ -9622,7 +9622,7 @@ MonoBehaviour:
   patrolData: {fileID: 11400000, guid: 6c5e3da5046452641a7d311cf5435116, type: 2}
   IseeYou: 0
   myData: {fileID: 11400000, guid: e50a8cd96ce78a445934d06e35181a7d, type: 2}
-  player: {fileID: 1261524378}
+  player: {fileID: 1259298097}
 --- !u!54 &1650334493
 Rigidbody:
   m_ObjectHideFlags: 0

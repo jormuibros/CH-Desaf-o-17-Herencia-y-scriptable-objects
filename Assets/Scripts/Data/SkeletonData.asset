@@ -18,5 +18,5 @@ MonoBehaviour:
   damage: 5
   Speed: 3
   RangeOfView: 5
-  minmunDistance: 10
+  minmunDistance: 5
   rotationSpeed: 5

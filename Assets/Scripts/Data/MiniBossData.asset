@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minibossName: Kruguer
   hp: 500
-  distanceRay: 20
+  distanceRay: 30
   damage: 50
-  Speed: 10
+  Speed: 30
   RangeOfView: 20
-  minmunDistance: 20
+  minmunDistance: 2
   rotationSpeed: 10
   shield: 10
