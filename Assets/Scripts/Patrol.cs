@@ -5,12 +5,10 @@ using UnityEngine;
 public class Patrol : MonoBehaviour
 {
     [SerializeField] Transform[] waypoints;
-    [SerializeField] float Speed;
-    [SerializeField] float RangeOfView =10f;
-    [SerializeField] float minmunDistance;
-    [SerializeField] float rotationSpeed;
     [SerializeField] GameObject Hero;
     [SerializeField] private Animator animEnemy;
+
+    [SerializeField] protected SkeletonData patrolData;
     
     public bool IseeYou = false;
     private bool goBack = false;
@@ -25,7 +23,7 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Vector3.Distance(transform.position, Hero.transform.position) <= RangeOfView)
+       if(Vector3.Distance(transform.position, Hero.transform.position) <= patrolData.RangeofView)
         {
             IseeYou = true;                              
         }
@@ -51,10 +49,10 @@ public class Patrol : MonoBehaviour
     {
         Vector3 deltaVector = waypoints[currentIndex].position - transform.position;
         Vector3 direction = deltaVector.normalized;
-        transform.forward = Vector3.Lerp(transform.forward, direction, rotationSpeed * Time.deltaTime);
-        transform.position += transform.forward * Speed * Time.deltaTime;
+        transform.forward = Vector3.Lerp(transform.forward, direction, patrolData.rotatioNSpeed * Time.deltaTime);
+        transform.position += transform.forward * patrolData.SpeeD * Time.deltaTime;
         float distance = deltaVector.magnitude;
-        if(distance < minmunDistance )
+        if(distance < patrolData.minimunDistance )
         {
           if(currentIndex >= waypoints.Length -1)
             {
@@ -78,12 +76,12 @@ public class Patrol : MonoBehaviour
     {
        // Debug.Log("ENTRO EN AREA");
         Vector3 direction =(Hero.transform.position - transform.position).normalized;
-        transform.forward = Vector3.Lerp(transform.forward, direction, rotationSpeed * Time.deltaTime);
-        transform.position += transform.forward * Speed * Time.deltaTime;
+        transform.forward = Vector3.Lerp(transform.forward, direction, patrolData.rotatioNSpeed * Time.deltaTime);
+        transform.position += transform.forward * patrolData.SpeeD * Time.deltaTime;
         
     }
     
-    private void OnCollisionEnter(Collision collision)
+    public virtual void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
@@ -94,7 +92,7 @@ public class Patrol : MonoBehaviour
         }
 
     }
-    private void OnDrawGizmos()
+    public virtual void OnDrawGizmos()
     {
         if(IseeYou == true)
         {
@@ -105,6 +103,6 @@ public class Patrol : MonoBehaviour
             Gizmos.color = Color.cyan;
         }
 
-        Gizmos.DrawWireSphere(transform.position, RangeOfView);
+        Gizmos.DrawWireSphere(transform.position, patrolData.RangeofView);
     }
 }

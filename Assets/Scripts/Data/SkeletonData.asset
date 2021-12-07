@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe964b1b6a01c049b136012c50a7b19, type: 3}
   m_Name: SkeletonData
   m_EditorClassIdentifier: 
-  Skeletonname: ENEMY
-  hp: 500
-  Speed: 5
+  skeletonName: Alias
+  hp: 100
   distanceRay: 10
-  damage: 50
+  damage: 5
+  Speed: 3
+  RangeOfView: 5
+  minmunDistance: 10
+  rotationSpeed: 5

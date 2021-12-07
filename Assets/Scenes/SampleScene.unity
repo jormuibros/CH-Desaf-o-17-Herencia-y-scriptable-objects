@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07449975, g: 0.069674365, b: 0.05286184, a: 1}
+  m_IndirectSpecularColor: {r: 0.074623905, g: 0.06977624, b: 0.05299245, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6075,12 +6075,9 @@ MonoBehaviour:
   - {fileID: 1376200715}
   - {fileID: 1408590930}
   - {fileID: 1133686361}
-  Speed: 5
-  RangeOfView: 10
-  minmunDistance: 1
-  rotationSpeed: 8
   Hero: {fileID: 1259298097}
-  animEnemy: {fileID: 1080444205}
+  animEnemy: {fileID: 1650334495}
+  patrolData: {fileID: 11400000, guid: 6c5e3da5046452641a7d311cf5435116, type: 2}
   IseeYou: 0
 --- !u!54 &1080444203
 Rigidbody:
@@ -6112,11 +6109,6 @@ CapsuleCollider:
   m_Height: 1.9092097
   m_Direction: 1
   m_Center: {x: 0, y: 0.82543856, z: 0}
---- !u!95 &1080444205 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95563511617423106, guid: 908987278249b014f91c9e63dd7174e8, type: 3}
-  m_PrefabInstance: {fileID: 1080444199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1081179968
 GameObject:
   m_ObjectHideFlags: 0
@@ -7109,12 +7101,9 @@ MonoBehaviour:
   - {fileID: 1376200715}
   - {fileID: 1133686361}
   - {fileID: 1408590930}
-  Speed: 2
-  RangeOfView: 10
-  minmunDistance: 1
-  rotationSpeed: 10
   Hero: {fileID: 1259298097}
   animEnemy: {fileID: 1157365332}
+  patrolData: {fileID: 11400000, guid: 6c5e3da5046452641a7d311cf5435116, type: 2}
   IseeYou: 0
 --- !u!54 &1157365336
 Rigidbody:
@@ -9628,14 +9617,12 @@ MonoBehaviour:
   - {fileID: 1408590930}
   - {fileID: 752061291}
   - {fileID: 1133686361}
-  Speed: 4
-  RangeOfView: 10
-  minmunDistance: 1
-  rotationSpeed: 5
   Hero: {fileID: 1259298097}
   animEnemy: {fileID: 1650334495}
+  patrolData: {fileID: 11400000, guid: 6c5e3da5046452641a7d311cf5435116, type: 2}
   IseeYou: 0
   myData: {fileID: 11400000, guid: e50a8cd96ce78a445934d06e35181a7d, type: 2}
+  player: {fileID: 1261524378}
 --- !u!54 &1650334493
 Rigidbody:
   m_ObjectHideFlags: 0
